@@ -107,6 +107,78 @@ public class dsa1 {
 		System.out.println(data);
 		
 	}
+
+	{//reversing array and palindrome
+		import java.util.Scanner;
+public class Main{
+    public static boolen ispalindrome(int[] arr){
+        int left=0;
+        int right=arr.length-1;
+        while(left<right){
+        if(arr[left]!=arr[right]){
+            return false;
+        }
+        left++;
+        right--;
+        }
+        return true;
+    }
+    
+    public static void reversearray(int[] arr){
+        int left=0;
+        int right=arr.length-1;
+        while(left<right){
+            int temp=arr[left];
+            arr[left]=arr[right];
+            arr[right]=temp;
+            left++;
+            right--;
+        }
+        
+    }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int length=sc.nextInt();
+        int[] arr=new int[length];
+        for(int i=0;i<length;i++){
+            arr[i]=sc.nextInt();
+        }
+        reversearray(arr);
+        for(int j:arr){
+            System.out.println(j);
+        }
+        if(ispalindrome(arr)){
+            System.out.println("Array is palindrome");
+        }else{
+            System.out.println("Not palindrome");
+        }
+    }
+}
+
+}
+	{//printfib number
+import java.util.Scanner;
+public class Main{
+    public static void printfib(int n){
+        int firstterm=0;
+        int secondterm=1;
+        for(int i=0;i<n;i++){
+            System.out.println(firstterm+" ");
+            int nextterm=firstterm+secondterm;
+            firstterm=secondterm;
+            secondterm=nextterm;
+        }
+    }
+    public static void main(String[] args){
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    printfib(n);
+    
+    }
+}
+    
+
+		
 	
     
     
